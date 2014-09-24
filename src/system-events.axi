@@ -707,8 +707,8 @@ button_event[dvTpTableDxlink,0]
 		switch (button.input.channel)
 		{
 			// TX - Auto
-			case BTN_DXLINK_TX_AUTO_1:   dxlinkEnableTxVideoInputAutoSelect (dvTxTable1Main)
-			case BTN_DXLINK_TX_AUTO_2:   dxlinkEnableTxVideoInputAutoSelect (dvTxTable2Main)
+			case BTN_DXLINK_TX_AUTO_1:   dxlinkEnableTxVideoInputAutoSelectPriotityDigital (dvTxTable1Main)
+			case BTN_DXLINK_TX_AUTO_2:   dxlinkEnableTxVideoInputAutoSelectPriotityDigital (dvTxTable2Main)
 
 			// TX - HDMI
 			case BTN_DXLINK_TX_HDMI_1:
