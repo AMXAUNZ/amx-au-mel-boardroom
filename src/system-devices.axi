@@ -204,12 +204,14 @@ dvDvxAudIn12    = DEV_ID_DVX_SWITCHER:DVX_PORT_AUD_IN_12:SYS_MASTER
 dvDvxAudIn13    = DEV_ID_DVX_SWITCHER:DVX_PORT_AUD_IN_13:SYS_MASTER
 dvDvxAudIn14    = DEV_ID_DVX_SWITCHER:DVX_PORT_AUD_IN_14:SYS_MASTER
 // Names ports
-dvDvxAudInEnzo  = dvDvxAudIn4
-dvDvxAudInPc    = dvDvxAudIn5
-dvDvxAudInTx1   = dvDvxAudIn7
-dvDvxAudInTx2   = dvDvxAudIn8
-dvDvxAudInTx3   = dvDvxAudIn9
-dvDvxAudInTx4   = dvDvxAudIn10
+dvDvxAudInTv      = dvDvxAudIn5
+dvDvxAudInEnzo    = dvDvxAudIn6
+dvDvxAudInPc      = dvDvxAudIn7
+dvDvxAudInSignage = dvDvxAudIn8
+dvDvxAudInTx1     = dvDvxAudIn9
+dvDvxAudInTx2     = dvDvxAudIn10
+dvDvxAudInTx3     = dvDvxAudIn9
+dvDvxAudInTx4     = dvDvxAudIn10
 
 // DVX Audio Outputs
 dvDvxAudOut1    = DEV_ID_DVX_SWITCHER:DVX_PORT_AUD_OUT_1:SYS_MASTER
