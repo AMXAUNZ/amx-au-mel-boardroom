@@ -292,7 +292,7 @@
 <FilePathName>src\agent-usb-ptz-web-cam\agent-usb-ptz-web-cam.axi</FilePathName>
 <Comments></Comments>
 </File>
-<File CompileType="Netlinx" Type="Source"><Identifier>amx-au-mel-boardroom-main</Identifier>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>amx-au-mel-boardroom-main</Identifier>
 <FilePathName>src\amx-au-mel-boardroom-main.axs</FilePathName>
 <Comments></Comments>
 </File>
