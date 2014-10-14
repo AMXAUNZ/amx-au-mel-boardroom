@@ -51,6 +51,7 @@ define_function showSourceControlPopup (integer input)
 	{
 		active (input == dvDvxVidInEnzo.port):
 		{
+			moderoEnablePopup (dvTpTableMain, POPUP_NAME_VOLUME_MODAL)
 			moderoEnablePopup (dvTpTableMain, POPUP_NAME_SOURCE_CONTROL_BACKGROUNDS[input])
 			moderoEnablePopup (dvTpTableMain, POPUP_NAME_SOURCE_CONTROL_ENZO)
 			// deactivate the source selection drag areas
@@ -60,6 +61,7 @@ define_function showSourceControlPopup (integer input)
 		
 		active (input == dvDvxVidInPc.port):
 		{
+			moderoEnablePopup (dvTpTableMain, POPUP_NAME_VOLUME_MODAL)
 			moderoEnablePopup (dvTpTableMain, POPUP_NAME_SOURCE_CONTROL_BACKGROUNDS[input])
 			moderoEnablePopup (dvTpTableMain, POPUP_NAME_SOURCE_CONTROL_PC)
 			// deactivate the source selection drag areas
@@ -69,6 +71,7 @@ define_function showSourceControlPopup (integer input)
 		
 		/*active (input == dvDvxVidInBluray.port):
 		{
+			moderoEnablePopup (dvTpTableMain, POPUP_NAME_VOLUME_MODAL)
 			moderoEnablePopup (dvTpTableMain, POPUP_NAME_SOURCE_CONTROL_BACKGROUNDS[input])
 			moderoEnablePopup (dvTpTableMain, POPUP_NAME_SOURCE_CONTROL_BLURAY_NAVIGATION)
 			// deactivate the source selection drag areas
@@ -78,6 +81,7 @@ define_function showSourceControlPopup (integer input)
 		
 		active (input == dvDvxVidInTv.port):
 		{
+			moderoEnablePopup (dvTpTableMain, POPUP_NAME_VOLUME_MODAL)
 			moderoEnablePopup (dvTpTableMain, POPUP_NAME_SOURCE_CONTROL_BACKGROUNDS[input])
 			moderoEnablePopup (dvTpTableMain, POPUP_NAME_SOURCE_CONTROL_BLURAY_TV_CHANNEL_LIST)
 			// deactivate the source selection drag areas
@@ -654,6 +658,7 @@ define_function tableInputDetected (dev dvTxVidIn)
 		moderoSetPage (dvTpTableMain, PAGE_NAME_MAIN_USER)
 		// show the source selection / volume control page
 		moderoEnablePopup (dvTpTableMain, POPUP_NAME_SOURCE_SELECTION)
+		moderoEnablePopup (dvTpTableMain, POPUP_NAME_VOLUME_NON_MODAL)
 		
 		//show the draggable source popups
 		moderoEnablePopup (dvTpTableMain, POPUP_NAME_DRAGGABLE_SOURCES[dvDvxVidInTv.port])
