@@ -7,6 +7,7 @@ program_name='rms-main'
 
 
 #include 'RmsEventListener'
+#include 'RmsSourceUsage'
 
 
 define_device
@@ -50,6 +51,16 @@ volatile char rmsFan1Name[] = 'Rack fan 1'
 volatile char rmsFan1Desc[] = 'Controllable active cooling'
 volatile char rmsFan2Name[] = 'Rack fan 2'
 volatile char rmsFan2Desc[] = 'Controllable active cooling'
+volatile char rmsLaptop1Name[] = 'Laptop 1'
+volatile char rmsLaptop1Desc[] = 'Laptop Input 1'
+volatile char rmsLaptop2Name[] = 'Laptop 2'    
+volatile char rmsLaptop2Desc[] = 'Laptop Input 2'
+volatile char rmsLaptop3Name[] = 'Laptop 3'    
+volatile char rmsLaptop3Desc[] = 'Laptop Input 3'
+volatile char rmsLaptop4Name[] = 'Laptop 4'    
+volatile char rmsLaptop4Desc[] = 'Laptop Input 4'
+volatile char rmsTvName[] = 'TV'    
+volatile char rmsTvDesc[] = 'TV Set Top Box'
 
 
 // Rms callbacks
@@ -115,12 +126,15 @@ define_module
 'RmsGenericNetLinxDeviceMonitor' mdlRmsKeypadMon(vdvRms, dvKeypad1)
 
 // DXLink receivers
-'RmsGenericNetLinxDeviceMonitor' mdlRmsRxMonitorLeftMon(vdvRms, dvRxMonitorLeftMain)
-'RmsGenericNetLinxDeviceMonitor' mdlRmsRxMonitorRightMon(vdvRms, dvRxMonitorRightMain)
+'RmsGenericNetLinxDeviceMonitor' mdlRmsRxMonitorLeftMon(vdvRms, dvRxMonitorLeftRms)
+'RmsGenericNetLinxDeviceMonitor' mdlRmsRxMonitorRightMon(vdvRms, dvRxMonitorRightRms)
 
 // DXLink transmitters
 'RmsGenericNetLinxDeviceMonitor' mdlRmsTxTable1Mon(vdvRms, dvTxTable1Main)
 'RmsGenericNetLinxDeviceMonitor' mdlRmsTxTable2Mon(vdvRms, dvTxTable2Main)
+
+// Enzo
+'RmsGenericNetLinxDeviceMonitor' mdlRmsEnzoMon(vdvRms, dvEnzo)
 
 // external relay box
 /*'RmsGenericNetLinxDeviceMonitor' mdlRmsRelayMon(vdvRms, dvRelaysRelBox)*/
@@ -128,6 +142,9 @@ define_module
 // monitoring for our LCD's
 'RmsDuetMonitorMonitor' mdlRmsLcdLeftMon(vdvRms, vdvMonitorLeft, dvMonitorLeft)
 'RmsDuetMonitorMonitor' mdlRmsLcdRightMon(vdvRms, vdvMonitorRight, dvMonitorRight)
+
+// Virtual monitor for TV Set Top Box
+'RmsVirtualDeviceMonitor' mdlRmsSetTopBox(vdvRms, vdvTv, rmsTvName, rmsTvDesc)
 
 // Monitoring for the lighting system
 // @TODO config internals of module
@@ -143,8 +160,8 @@ define_module
 'RmsVirtualDeviceMonitor' mdlRmsPcMon(vdvRms, rmsPc, rmsPcName, rmsPcDesc)
 
 // Virtual monitor for the additional rack fans
-'RmsVirtualDeviceMonitor' mdlRmsFan1Mon(vdvRms, rmsFan1, rmsFan1Name, rmsFan1Desc)
-'RmsVirtualDeviceMonitor' mdlRmsFan1Mon(vdvRms, rmsFan2, rmsFan2Name, rmsFan2Desc)
+//'RmsVirtualDeviceMonitor' mdlRmsFan1Mon(vdvRms, rmsFan1, rmsFan1Name, rmsFan1Desc)
+//'RmsVirtualDeviceMonitor' mdlRmsFan1Mon(vdvRms, rmsFan2, rmsFan2Name, rmsFan2Desc)
 
 // PDU monitor
 'RmsPowerDistributionUnitMonitor' mdlRmsPduMon(vdvRms, dvPduMain1, rmsPduAssets)
@@ -152,6 +169,11 @@ define_module
 // @TODO register blinds and shades
 
 // @TODO implement source usage monitoring
+'RmsVirtualDeviceMonitor' mdlRmsAssetLaptop1(vdvRms, vdvLaptop1, rmsLaptop1Name, rmsLaptop1Desc)
+'RmsVirtualDeviceMonitor' mdlRmsAssetLaptop2(vdvRms, vdvLaptop2, rmsLaptop2Name, rmsLaptop2Desc)
+//'RmsVirtualDeviceMonitor' mdlRmsAssetLaptop3(vdvRms, vdvLaptop3, rmsLaptop3Name, rmsLaptop3Desc)
+//'RmsVirtualDeviceMonitor' mdlRmsAssetLaptop4(vdvRms, vdvLaptop4, rmsLaptop4Name, rmsLaptop4Desc)
+
 
 // @TODO add camera monitoring (requires NetLinx / Duet control module for simple integration)
 
