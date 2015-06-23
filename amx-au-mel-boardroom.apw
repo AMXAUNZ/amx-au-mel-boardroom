@@ -140,6 +140,12 @@
 <FilePathName>C:\Program Files (x86)\Common Files\AMXShare\AXIs\SNAPI.axi</FilePathName>
 <Comments></Comments>
 </File>
+<File CompileType="Netlinx" Type="IR"><Identifier>DGTEC,UNKNOWN,DG-HD8040,Set Top Box,1</Identifier>
+<FilePathName>ir\DGTEC,UNKNOWN,DG-HD8040,Set Top Box,1.irl</FilePathName>
+<Comments></Comments>
+<DeviceMap DevAddr="Custom [5001:9:0]"><DevName>Custom [5001:9:0]</DevName>
+</DeviceMap>
+</File>
 <File CompileType="None" Type="Include"><Identifier>amx-controlports-api</Identifier>
 <FilePathName>lib\amx-device-library\amx-controlports-api.axi</FilePathName>
 <Comments></Comments>
